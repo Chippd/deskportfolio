@@ -28,7 +28,7 @@
         z-index: 1;
         overflow-x: scroll;
         white-space: nowrap;
-				padding: 0 35vw;
+				padding: 0 50vw;
     }
 
     #carousel::-webkit-scrollbar {
@@ -110,29 +110,26 @@
         	// close all other items that may be open
         	removeClass(items, "expanded");
 
-        	let left = el.target.offsetLeft;
-        	console.log("left:", left);
-
-        	let elementWidth = el.target.offsetWidth;
-        	let elementHalf = elementWidth/2;
-
-        	let screenwidth = window.outerWidth;
-
-
-        	let target = left - (screenwidth/2 - elementWidth/2);
-
-        	console.log('scrolling to:', target);
-
-        	// scroll carousel element to right position
-        	document.getElementById("carousel").scrollTo({
-        	    left: target,
-        	    behavior: "smooth"
-        	});
+        	scrollToCard(el.target)
            
           toggleExpanded(el.target);
 
             
         })
+    }
+
+    function scrollToCard(card){
+
+    	let left = card.offsetLeft;
+    	let elementWidth = card.offsetWidth;
+    	let screenwidth = window.outerWidth;
+
+    	let target = left - (screenwidth/2 - elementWidth/2);
+
+    	document.getElementById("carousel").scrollTo({
+    	    left: target,
+    	    behavior: "smooth"
+    	});
     }
 
     function removeClass(els, className){
@@ -162,6 +159,22 @@
             el.className = classes.join(' ');
         }
     }
+
+    function onLoaded(){
+    	// pick first card
+    	scrollToCard(document.getElementsByClassName("carousel-item")[0])
+    }
+
+    function ready(fn) {
+      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    ready(onLoaded);
+    
     </script>
 </body>
 
