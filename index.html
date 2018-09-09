@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Chris Dermody Portfolio site - desk</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
     <style>
     body,
     html {
         margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, p {
+    	font-family: 'Quicksand', sans-serif;
     }
 
     .container {
@@ -23,6 +31,11 @@
         grid-template-rows: 75px 1.5fr 1fr;
     }
 
+    .header {
+    	text-align: center;
+    	color: grey;
+    }
+
     #carousel {
         position: relative;
         z-index: 1;
@@ -36,7 +49,7 @@
     }
 
     .carousel-item {
-        display: inline-block;
+        display: inline-flex;
         background: white;
         border-radius: 10px;
         width: 300px;
@@ -44,10 +57,11 @@
         margin: 15px;
         position: relative;
         transition: all 0.25s ease;
+        text-align: center;
     }
 
-    .carousel-item.expanded {
-        width: 300px;
+    .carousel-item.selected:after {
+	    	box-shadow: 0 15px 50px 6px rgba(82, 82, 82, 0.5);				
     }
 
     .carousel-item:after {
@@ -61,12 +75,26 @@
         z-index: -1;
         box-shadow: 0 8px 50px 6px rgba(82, 82, 82, 0.5);
         margin-left: 10%;
-        transition: all 0.25s ease;
+        transition: all 0.25s ease-in-out;
     }
 
-    .carousel-item.expanded:after {
-				/*bottom: -10px;*/
+    .carousel-item .center {
+    	width: 100%;
     }
+
+    .carousel-item .dev-icons {
+    	margin-top: 100px;
+    	font-size: 2.5em;
+    }
+
+		.carousel-item .dev-icons i {
+			color: #c57d51 !important;
+			margin: 0 5px;
+		}
+
+		.dev-icons .second-row {
+			margin-top: 5px;
+		}
 
     </style>
 </head>
@@ -74,57 +102,75 @@
 <body>
     <div class="container">
         <div class="header">
+        	<!-- <h1>Work</h1> -->
         </div>
         <div id="carousel">
             <div class="carousel-item">
+            	<div class="center">
+            		<h2>Mydevportfol.io</h2>
+            		<p>A portfolio site builder for developers</p>
+            		<div class="dev-icons">
+            			<div class="first-row">
+            				<i class="devicon-html5-plain-wordmark colored"></i>
+            				<i class="devicon-heroku-plain colored"></i>
+            				<i class="devicon-javascript-plain colored"></i>
+            			</div>
+            			<div class="second-row">
+            				<i class="devicon-angularjs-plain colored"></i>
+            				<i class="devicon-nodejs-plain colored"></i>
+            			</div>
+
+            		</div>
+            		<?xml version="1.0" ?><svg height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#929292" id="icon-111-search"><path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search"/></g></g></svg>
+            	</div>
             </div>
-            <div class="carousel-item">
+             <div class="carousel-item">
+            	<div class="center">
+            		<h2>Mydevportfol.io</h2>
+            		<p>A portfolio site builder for developers</p>
+            	</div>
             </div>
-            <div class="carousel-item">
+             <div class="carousel-item">
+            	<div class="center">
+            		<h2>Mydevportfol.io</h2>
+            		<p>A portfolio site builder for developers</p>
+            	</div>
             </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
+
         </div>
         <div class="bottom">
             <p>bottom</p>
         </div>
     </div>
     <script>
+
     // Listen for card click, assign "expanded" class
     let items = document.getElementsByClassName('carousel-item');
 
     // loop over each item, add click listener
     for (let i = 0, length1 = items.length; i < length1; i++) {
+
         items[i].addEventListener("click", function(el) {
 
         	// close all other items that may be open
-        	removeClass(items, "expanded");
+        	removeClass(items, "selected");
 
-        	scrollToCard(el.target)
-           
-          toggleExpanded(el.target);
+					toggleExpanded(items[i]);
 
+					scrollToCard(items[i]);
             
         })
     }
 
     function scrollToCard(card){
-
+    	// Centres card in screen
     	let left = card.offsetLeft;
-    	let elementWidth = card.offsetWidth;
+
+    	let elementWidth =700;
+
     	let screenwidth = window.outerWidth;
 
-    	let target = left - (screenwidth/2 - elementWidth/2);
+    	let target = left - (screenwidth/2 - elementWidth/2)  - 200;
 
     	document.getElementById("carousel").scrollTo({
     	    left: target,
@@ -144,7 +190,7 @@
     }
 
     function toggleExpanded(el) {
-        let className = "expanded";
+        let className = "selected";
         if (el.classList) {
             el.classList.toggle(className);
         } else {
@@ -162,7 +208,15 @@
 
     function onLoaded(){
     	// pick first card
-    	scrollToCard(document.getElementsByClassName("carousel-item")[0])
+
+    	let firstCard = document.getElementsByClassName("carousel-item")[0];
+
+    	toggleExpanded(firstCard);
+
+    	setTimeout(function(){
+    		scrollToCard(firstCard);
+    	}, 250)    	
+
     }
 
     function ready(fn) {
@@ -174,7 +228,7 @@
     }
 
     ready(onLoaded);
-    
+
     </script>
 </body>
 
