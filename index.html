@@ -9,95 +9,95 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
     <style>
-    body,
-    html {
-        margin: 0;
-    }
+        body,
+        html {
+            margin: 0;
+        }
 
-    h1, h2, h3, h4, h5, p {
-    	font-family: 'Quicksand', sans-serif;
-    }
+        h1, h2, h3, h4, h5, p {
+        	font-family: 'Quicksand', sans-serif;
+        }
 
-    .container {
-        display: grid;
-        position: relative;
-        overflow: hidden;
-        width: 100vw;
-        height: 100vh;
-        background-image: url('https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-        background-size: cover;
-        background-position-x: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 75px 1.5fr 1fr;
-    }
+        .container {
+            display: grid;
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-size: cover;
+            background-position-x: center;
+            grid-template-columns: 1fr;
+            grid-template-rows: 75px 1.5fr 1fr;
+        }
 
-    .header {
-    	text-align: center;
-    	color: grey;
-    }
+        .header {
+        	text-align: center;
+        	color: grey;
+        }
 
-    #carousel {
-        position: relative;
-        z-index: 1;
-        overflow-x: scroll;
-        white-space: nowrap;
-				padding: 0 50vw;
-    }
+        #carousel {
+            position: relative;
+            z-index: 1;
+            overflow-x: scroll;
+            white-space: nowrap;
+			padding: 0 50vw;
+        }
 
-    #carousel::-webkit-scrollbar {
-        display: none;
-    }
+        #carousel::-webkit-scrollbar {
+            display: none;
+        }
 
-    .carousel-item {
-        display: inline-flex;
-        background: white;
-        border-radius: 10px;
-        width: auto;
-        height: 85%;
-        margin: 15px;
-        position: relative;
-        transition: all 0.25s ease;
-        text-align: center;
-    }
+        .carousel-item {
+            display: inline-flex;
+            background: white;
+            border-radius: 10px;
+            width: auto;
+            height: 85%;
+            margin: 15px;
+            position: relative;
+            transition: all 0.25s ease;
+            text-align: center;
+        }
 
-    .carousel-item.selected:after {
+        .carousel-item.selected:after {
 	    	box-shadow: 0 15px 50px 6px rgba(82, 82, 82, 0.5);				
-    }
+        }
 
-    .carousel-item:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 80%;
-        height: 30px;
-        border-radius: 50%;
-        z-index: -1;
-        box-shadow: 0 8px 50px 6px rgba(82, 82, 82, 0.5);
-        margin-left: 10%;
-        transition: all 0.25s ease-in-out;
-    }
+        .carousel-item:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80%;
+            height: 30px;
+            border-radius: 50%;
+            z-index: -1;
+            box-shadow: 0 8px 50px 6px rgba(82, 82, 82, 0.5);
+            margin-left: 10%;
+            transition: all 0.25s ease-in-out;
+        }
 
-    .carousel-item .center {
-    	width: 300px;
-    }
+        .carousel-item .center {
+        	width: 300px;
+        }
 
-    .carousel-item .left,
-    .carousel-item .right {
-    	width: 0px;
-    	transition: width 0.25s ease-in-out;
-    	overflow: hidden;
-    }
+        .carousel-item .left,
+        .carousel-item .right {
+        	width: 0px;
+        	transition: width 0.25s ease-in-out;
+        	overflow: hidden;
+        }
 
-    .carousel-item.selected .left,
-    .carousel-item.selected .right {
+        .carousel-item.selected .left,
+        .carousel-item.selected .right {
 			width: 200px;
-    } 
+        } 
 
-    .carousel-item .dev-icons {
-    	margin-top: 100px;
-    	font-size: 2.5em;
-    }
+        .carousel-item .dev-icons {
+        	margin-top: 100px;
+        	font-size: 2.5em;
+        }
 
 		.carousel-item .dev-icons i {
 			color: #c57d51 !important;
@@ -107,7 +107,6 @@
 		.dev-icons .second-row {
 			margin-top: 5px;
 		}
-
     </style>
 </head>
 
@@ -142,7 +141,7 @@
             		<p>this is the right panel</p>
             	</div>
             </div>
-            <div class="carousel-item">
+            <!-- <div class="carousel-item">
             	<div class="left">
             		<p>this is the left panel</p>
             	</div>
@@ -192,98 +191,124 @@
             		<p>this is the right panel</p>
             	</div>
             </div>
+            <div class="carousel-item">
+                <div class="left">
+                    <p>this is the left panel</p>
+                </div>
+                <div class="center">
+                    <h2>Mydevportfol.io</h2>
+                    <p>A portfolio site builder for developers</p>
+                    <div class="dev-icons">
+                        <div class="first-row">
+                            <i class="devicon-html5-plain-wordmark colored"></i>
+                            <i class="devicon-heroku-plain colored"></i>
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <div class="second-row">
+                            <i class="devicon-angularjs-plain colored"></i>
+                            <i class="devicon-nodejs-plain colored"></i>
+                        </div>
 
+                    </div>
+                    <?xml version="1.0" ?><svg height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#929292" id="icon-111-search"><path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z" id="search"/></g></g></svg>
+                </div>
+                <div class="right">
+                    <p>this is the right panel</p>
+                </div>
+            </div> -->
         </div>
         <div class="bottom">
             <p>bottom</p>
         </div>
     </div>
+
     <script>
 
-    // Listen for card click, assign "expanded" class
-    let items = document.getElementsByClassName('carousel-item');
+        // Listen for card click, assign "expanded" class
+        let items = document.getElementsByClassName('carousel-item');
 
-    // loop over each item, add click listener
-    for (let i = 0, length1 = items.length; i < length1; i++) {
+        // loop over each item, add click listener
+        for (let i = 0, length1 = items.length; i < length1; i++) {
 
-        items[i].addEventListener("click", function(el) {
+            items[i].addEventListener("click", function(el) {
 
-        	// close all other items that may be open
-        	removeClass(items, "selected");
+            	// close all other items that may be open
+            	removeClass(items, "selected");
 
-					toggleExpanded(items[i]);
+				toggleExpanded(items[i]);
 
-					scrollToCard(items[i]);
-            
-        })
-    }
-
-    function scrollToCard(card){
-    	// Centres card in screen
-    	let left = card.offsetLeft;
-
-    	let elementWidth =700;
-
-    	let screenwidth = window.outerWidth;
-
-    	let target = left - (screenwidth/2 - elementWidth/2)  - 200;
-
-    	document.getElementById("carousel").scrollTo({
-    	    left: target,
-    	    behavior: "smooth"
-    	});
-    }
-
-    function removeClass(els, className){
-
-    	for(let i = 0, length1 = els.length; i < length1; i++){
-    		els[i]
-    		if (els[i].classList)
-    		  els[i].classList.remove(className);
-    		else
-    		  els[i].className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    	}
-    }
-
-    function toggleExpanded(el) {
-        let className = "selected";
-        if (el.classList) {
-            el.classList.toggle(className);
-        } else {
-            var classes = el.className.split(' ');
-            var existingIndex = classes.indexOf(className);
-
-            if (existingIndex >= 0)
-                classes.splice(existingIndex, 1);
-            else
-                classes.push(className);
-
-            el.className = classes.join(' ');
+				scrollToCard(items[i]);
+                
+            })
         }
-    }
 
-    function onLoaded(){
-    	// pick first card
+        function scrollToCard(card){
+        	// Centres card in screen
+        	let left = card.offsetLeft;
 
-    	let firstCard = document.getElementsByClassName("carousel-item")[0];
+        	let elementWidth = 700;
 
-    	toggleExpanded(firstCard);
+        	let screenwidth = window.outerWidth;
 
-    	setTimeout(function(){
-    		scrollToCard(firstCard);
-    	}, 250)    	
+            // 350 - half of the size of the card when selected/expanded
+        	let target = left - (screenwidth/2 - elementWidth) - 350;
 
-    }
+        	document.getElementById("carousel").scrollTo({
+        	    left: target,
+        	    behavior: "smooth"
+        	});
+        }
 
-    function ready(fn) {
-      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-        fn();
-      } else {
-        document.addEventListener('DOMContentLoaded', fn);
-      }
-    }
+        function removeClass(els, className){
 
-    ready(onLoaded);
+        	for(let i = 0, length1 = els.length; i < length1; i++){
+        		els[i]
+        		if (els[i].classList)
+        		  els[i].classList.remove(className);
+        		else
+        		  els[i].className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        	}
+        }
+
+        function toggleExpanded(el) {
+            let className = "selected";
+            if (el.classList) {
+                el.classList.toggle(className);
+            } else {
+                var classes = el.className.split(' ');
+                var existingIndex = classes.indexOf(className);
+
+                if (existingIndex >= 0)
+                    classes.splice(existingIndex, 1);
+                else
+                    classes.push(className);
+
+                el.className = classes.join(' ');
+            }
+        }
+
+        function onLoaded(){
+        	// pick first card
+
+        	let firstCard = document.getElementsByClassName("carousel-item")[0];
+
+        	toggleExpanded(firstCard);
+
+        	setTimeout(function(){
+        		scrollToCard(firstCard);
+        	}, 250)    	
+
+        }
+
+        function ready(fn) {
+          if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+            fn();
+          } else {
+            document.addEventListener('DOMContentLoaded', fn);
+          }
+        }
+
+        ready(onLoaded);
 
     </script>
 </body>
