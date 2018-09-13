@@ -141,7 +141,7 @@
             		<p>this is the right panel</p>
             	</div>
             </div>
-            <!-- <div class="carousel-item">
+            <div class="carousel-item">
             	<div class="left">
             		<p>this is the left panel</p>
             	</div>
@@ -215,7 +215,7 @@
                 <div class="right">
                     <p>this is the right panel</p>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="bottom">
             <p>bottom</p>
@@ -244,14 +244,14 @@
 
         function scrollToCard(card){
         	// Centres card in screen
+
         	let left = card.offsetLeft;
 
         	let elementWidth = 700;
 
         	let screenwidth = window.outerWidth;
 
-            // 350 - half of the size of the card when selected/expanded
-        	let target = left - (screenwidth/2 - elementWidth) - 350;
+        	let target = left - (screenwidth - elementWidth) / 2;
 
         	document.getElementById("carousel").scrollTo({
         	    left: target,
