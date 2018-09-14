@@ -232,18 +232,34 @@
 
             items[i].addEventListener("click", function(el) {
 
+            	// need to know if card clicked has any cards previous to it with "expanded" class
+            	let expandedIndex;
+            	let clickedIndex = i; 
+
+            	for(let index = 0, length1 = items.length; index < length1; index++){
+            		if(items[index].classList.value.match(/selected/)){
+            			expandedIndex = index
+            		}
+            	}
+
             	// close all other items that may be open
             	removeClass(items, "selected");
 
-				toggleExpanded(items[i]);
+							toggleExpanded(items[i]);
 
-				scrollToCard(items[i]);
+							scrollToCard(items[i], expandedIndex, clickedIndex);
                 
             })
         }
 
-        function scrollToCard(card){
+        function scrollToCard(card, expandedIndex, clickedIndex){
+
         	// Centres card in screen
+        	let adjustment = 0; 
+
+        	if(clickedIndex > expandedIndex){
+        		adjustment = 400;
+        	}
 
         	let left = card.offsetLeft;
 
@@ -251,7 +267,7 @@
 
         	let screenwidth = window.outerWidth;
 
-        	let target = left - (screenwidth - elementWidth) / 2;
+        	let target = left - adjustment - (screenwidth - elementWidth) / 2;
 
         	document.getElementById("carousel").scrollTo({
         	    left: target,
