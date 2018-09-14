@@ -1,6 +1,6 @@
 body,
 html {
-    margin: 0;
+		margin: 0;
 }
 
 h1,
@@ -9,123 +9,156 @@ h3,
 h4,
 h5,
 p {
-    font-family: 'Quicksand', sans-serif;
+		font-family: 'Quicksand', sans-serif;
 }
 
 .container {
-    display: grid;
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-size: cover;
-    background-position-x: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 75px 1.5fr 1fr;
+		display: grid;
+		position: relative;
+		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		background-image: url('https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+		background-size: cover;
+		background-position-x: center;
+		grid-template-columns: 1fr;
+		grid-template-rows: 75px 1.5fr 1fr;
 }
 
 .header {
-    text-align: center;
-    color: grey;
+		text-align: center;
+		color: grey;
 }
 
 #carousel {
-    position: relative;
-    z-index: 1;
-    overflow-x: scroll;
-    white-space: nowrap;
-    padding: 0 50vw;
+		position: relative;
+		z-index: 1;
+		overflow-x: scroll;
+		white-space: nowrap;
+		padding: 0 50vw;
 }
 
 #carousel::-webkit-scrollbar {
-    display: none;
+		display: none;
 }
 
 .carousel-item {
-    display: inline-flex;
-    background: white;
-    border-radius: 10px;
-    width: auto;
-    height: 85%;
-    margin: 15px;
-    position: relative;
-    transition: all 0.5s ease;
-    text-align: center;
-    cursor: pointer;
+		display: inline-flex;
+		background: white;
+		border-radius: 10px;
+		width: auto;
+		height: 85%;
+		margin: 15px;
+		position: relative;
+		transition: all 0.5s ease;
+		text-align: center;
+		cursor: pointer;
+		top:0;
 }
 
-.carousel-item.selected {
-    /*background: none;*/
-}
+.carousel-item.selected {}
 
 .carousel-item.selected:after {
-    box-shadow: 0 15px 50px 6px rgba(82, 82, 82, 0.5);
-    /*opacity: 0*/
+		box-shadow: 0 15px 50px 6px rgba(82, 82, 82, 0.5);
+		/*opacity: 0*/
 }
 
 .carousel-item:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80%;
-    height: 30px;
-    border-radius: 50%;
-    z-index: -1;
-    box-shadow: 0 8px 50px 6px rgba(82, 82, 82, 0.5);
-    margin-left: 10%;
-    transition: all 0.25s ease-in-out;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 80%;
+		height: 30px;
+		border-radius: 50%;
+		z-index: -1;
+		/*box-shadow: 0 8px 50px 6px rgba(82, 82, 82, 0.5);*/
+		margin-left: 10%;
+		transition: all 0.25s ease-in-out;
 }
 
 .carousel-item .center {
-    width: 300px;
+		width: 300px;
 }
 
 .carousel-item .left,
 .carousel-item .right {
-    width: 0px;
-    transition: width 0.5s ease-in-out;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+		width: 0px;
+		transition: width 0.5s ease-in-out;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 }
 
 .carousel-item.selected .left,
 .carousel-item.selected .right {
-    width: 200px;
+		width: 200px;
 }
 
 .carousel-item .dev-icons {
-    font-size: 1.5em;
+		font-size: 1.5em;
 }
 
 .carousel-item .dev-icons i {
-    color: #c57d51 !important;
-    margin: 0 5px;
+		color: #dda77d !important;
+		margin: 0 5px;
 }
 
 .dev-icons .second-row {
-    margin-top: 5px;
+		margin-top: 5px;
 }
 
 .project-img {
-    max-width: 90%;
-    margin: auto;
+		max-width: 90%;
+		margin: auto;
 }
 
 .search-holder {
-    position: absolute;
-    left: 49%;
-    bottom: -23px;
-    background: white;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    /* box-shadow: 0 0 13px 4px #80808061; */
-    border: 1px solid #f9d2b8;
+		position: absolute;
+		left: calc(50% - 20px);
+		bottom: 25px;
+		background: #d6a37b;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		box-shadow: 0 4px 13px 2px #80808036;
+		transition: all 0.1s ease-in-out;
+		cursor: pointer;
 }
+
+
+.search-holder:hover {
+	bottom: 30px;
+	box-shadow: 0 8px 13px 2px #80808036;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
