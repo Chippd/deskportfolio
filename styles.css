@@ -64,13 +64,18 @@ a:hover {
 		text-align: center;
 		cursor: pointer;
 		top:0;
+		width: 300px;
+		opacity: 0.6;
+		transition: all 0.25s ease-in-out;
 }
 
-.carousel-item.selected {}
+.carousel-item.selected {
+	margin: 15px 200px 0 200px;
+	opacity: 1;
+}
 
 .carousel-item.selected:after {
 		box-shadow: 0 15px 50px 6px rgba(82, 82, 82, 0.5);
-		/*opacity: 0*/
 }
 
 .carousel-item:after {
@@ -82,28 +87,50 @@ a:hover {
 		height: 30px;
 		border-radius: 50%;
 		z-index: -1;
-		/*box-shadow: 0 8px 50px 6px rgba(82, 82, 82, 0.5);*/
 		margin-left: 10%;
-		transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-out;
 }
 
 .carousel-item .center {
 		width: 300px;
+		z-index: 10;
+}
+
+.carousel-item.selected {
+		border-radius: 0px;
 }
 
 .carousel-item .left,
 .carousel-item .right {
-		width: 0px;
-		transition: width 0.5s ease-in-out;
+		width: 200px;
+		transition: all 0.5s ease-out;
 		overflow: hidden;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: absolute;
+		height: 100%;
+		background: white;
+		left:0px;
+		opacity: 0;
 }
 
-.carousel-item.selected .left,
+.carousel-item .left {
+	border-radius: 10px 0 0 10px;
+}
+
+.carousel-item .right {
+	border-radius: 0px 10px 10px 0px;
+}
+
+.carousel-item.selected .left {
+	left: -200px;
+	opacity: 1;
+}
+
 .carousel-item.selected .right {
-		width: 200px;
+	left: 300px;
+	opacity: 1;
 }
 
 .carousel-item .left p {
@@ -130,6 +157,7 @@ a:hover {
 }
 
 .search-holder {
+		opacity: 0;
 		position: absolute;
 		left: calc(50% - 20px);
 		bottom: -20px;
@@ -149,6 +177,10 @@ a:hover {
 .search-holder:hover {
 	bottom: -15px;
 	box-shadow: 0 8px 13px 2px #80808036;
+}
+
+.carousel-item.selected .search-holder {
+	opacity: 1;
 }
 
 .bottom {
