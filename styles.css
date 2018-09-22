@@ -12,6 +12,15 @@ p {
 		font-family: 'Quicksand', sans-serif;
 }
 
+a,
+a:visited {
+	color: #8e8989;
+}
+
+a:hover {
+	color: #565656;
+}
+
 .container {
 		display: grid;
 		position: relative;
@@ -36,6 +45,7 @@ p {
 		overflow-x: scroll;
 		white-space: nowrap;
 		padding: 0 50vw;
+		display: flex;
 }
 
 #carousel::-webkit-scrollbar {
@@ -94,6 +104,11 @@ p {
 .carousel-item.selected .left,
 .carousel-item.selected .right {
 		width: 200px;
+}
+
+.carousel-item .left p {
+	max-width: 80%;
+	white-space: normal;
 }
 
 .carousel-item .dev-icons {
