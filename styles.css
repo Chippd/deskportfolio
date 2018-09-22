@@ -117,7 +117,7 @@ p {
 .search-holder {
 		position: absolute;
 		left: calc(50% - 20px);
-		bottom: 25px;
+		bottom: -20px;
 		background: #d6a37b;
 		width: 40px;
 		height: 40px;
@@ -132,12 +132,39 @@ p {
 
 
 .search-holder:hover {
-	bottom: 30px;
+	bottom: -15px;
 	box-shadow: 0 8px 13px 2px #80808036;
 }
 
+.bottom {
+	margin-left: 4%;
+}
 
+.bottom h1 {
+	margin: 10px 0;
+	font-size: 24px;
+}
 
+.bottom h2 {
+	font-size: 18px;
+}
+
+.profile-pic {
+	width: 80px;
+	/*height: 100px;*/
+	border-radius: 10px;
+}
+
+.sm-link {
+	width: 25px;
+	display: inline-block;
+	margin-right: 10px;
+	transition: fill 0.1s ease;
+}
+
+.sm-link.linkedin:hover path {
+	fill: #0077B5;
+}
 
 
 
