@@ -37,7 +37,7 @@ function scrollToCard(card, expandedIndex, clickedIndex) {
 
 	let left = card.offsetLeft;
 
-	let elementWidth = 700;
+	let elementWidth = 300;
 
 	let screenwidth = window.outerWidth;
 
