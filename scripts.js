@@ -34,11 +34,11 @@ function scrollToCard(card, expandedIndex, clickedIndex) {
 	let adjustment = 0;
 
 	if(clickedIndex === expandedIndex){
-		adjustment = -10
+		adjustment = 0;
 	} else if (clickedIndex > expandedIndex) {
 		adjustment = 200;
 	} else {
-		adjustment = -150;
+		adjustment = -200;
 	}
 
 	let left = card.offsetLeft;

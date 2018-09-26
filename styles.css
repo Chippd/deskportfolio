@@ -57,7 +57,7 @@ a:hover {
 		border-radius: 10px;
 		width: auto;
 		height: 85%;
-		margin: 15px;
+		margin: 10px 15px;
 		position: relative;
 		transition: all 0.5s ease;
 		text-align: center;
@@ -69,7 +69,7 @@ a:hover {
 }
 
 .carousel-item.selected {
-	margin: 15px 200px 0 200px;
+	margin: 15px 215px 0 215px;
 	opacity: 1;
 	box-shadow: 0 15px 50px 6px rgba(82, 82, 82, 0.5);
 }
