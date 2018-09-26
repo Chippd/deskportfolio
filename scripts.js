@@ -28,20 +28,29 @@ for (let i = 0, length1 = items.length; i < length1; i++) {
 
 function scrollToCard(card, expandedIndex, clickedIndex) {
 
+	// debugger
+
 	// Centres card in screen
 	let adjustment = 0;
 
-	if (clickedIndex > expandedIndex) {
-		adjustment = 400;
+	if(clickedIndex === expandedIndex){
+		adjustment = -10
+	} else if (clickedIndex > expandedIndex) {
+		adjustment = 200;
+	} else {
+		adjustment = -150;
 	}
 
 	let left = card.offsetLeft;
 
-	let elementWidth = 300;
+	let elementWidth = card.offsetWidth;
 
 	let screenwidth = window.outerWidth;
 
-	let target = left - adjustment - (screenwidth - elementWidth) / 2;
+	let target = left - (adjustment) - (screenwidth - elementWidth) / 2;
+
+
+	console.log('target:', target);
 
 	document.getElementById("carousel").scrollTo({
 		left: target,
