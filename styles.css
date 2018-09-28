@@ -214,7 +214,14 @@ a:hover {
 	fill: #0077B5;
 }
 
+/*Mobile styles*/
 
+@media only screen and (max-width: 768px) {
+
+    .bottom {
+        background-color: white;
+    }
+}
 
 
 
