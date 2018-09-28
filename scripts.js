@@ -44,11 +44,12 @@ function scrollToCard(card, expandedIndex, clickedIndex) {
 	let left = card.offsetLeft;
 
 	let elementWidth = card.offsetWidth;
+	
+	let container = document.getElementsByClassName('container')[0]
 
-	let screenwidth = window.outerWidth;
+	let screenwidth = container.offsetWidth;
 
 	let target = left - (adjustment) - (screenwidth - elementWidth) / 2;
-
 
 	console.log('target:', target);
 
