@@ -46,6 +46,7 @@ a:hover {
 		overflow-x: scroll;
 		white-space: nowrap;
 		padding: 40px 50vw 0;
+		overflow: -moz-scrollbars-none;
 }
 
 #carousel::-webkit-scrollbar {
