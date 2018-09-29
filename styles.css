@@ -64,11 +64,14 @@ a:hover {
 		position: relative;
 		transition: all 0.5s ease;
 		text-align: center;
-		cursor: pointer;
 		top:0;
 		width: 300px;
 		opacity: 0.6;
 		transition: all 0.25s ease-in-out;
+}
+
+.carousel-item:not(.selected) {
+	cursor: pointer;
 }
 
 .carousel-item.selected {
