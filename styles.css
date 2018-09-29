@@ -66,8 +66,10 @@ a:hover {
 		text-align: center;
 		top:0;
 		width: 300px;
-		opacity: 0.6;
+		/*opacity: 0.6;*/
 		transition: all 0.25s ease-in-out;
+		box-shadow: 0 5px 12px 3px rgba(82, 82, 82, 0.16);
+		
 }
 
 .carousel-item:not(.selected) {
@@ -77,7 +79,9 @@ a:hover {
 .carousel-item.selected {
 	margin: 15px 215px 0 215px;
 	opacity: 1;
-	box-shadow:  0 5px 20px 0px rgba(82, 82, 82, 0.5);
+	/*box-shadow:  0 5px 20px 0px rgba(82, 82, 82, 0.5);*/
+	box-shadow: none;
+	background-color: transparent;
 }
 
 .center {
@@ -99,7 +103,7 @@ a:hover {
 		justify-content: center;
 		position: absolute;
 		height: 100%;
-		background: white;
+		background: transparent;
 		left:0px;
 		opacity: 0;
 }
