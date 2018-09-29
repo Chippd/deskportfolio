@@ -1,6 +1,7 @@
 body,
 html {
 		margin: 0;
+		height:100%;
 }
 
 h1,
@@ -26,7 +27,7 @@ a:hover {
 		position: relative;
 		overflow: hidden;
 		width: 100vw;
-		height: 100vh;
+		height: 100%;
 		background-image: url('https://images.pexels.com/photos/509922/pexels-photo-509922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
 		background-size: cover;
 		background-position-x: center;
