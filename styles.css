@@ -136,7 +136,7 @@ a:hover {
 }
 
 .project-img {
-		max-width: 90%;
+		max-width: 70%;
 		max-height: 50%;
 		margin: 0 auto;
 }
@@ -178,11 +178,11 @@ a:hover {
 
 .bottom h1 {
 	margin: 10px 0;
-	font-size: 24px;
+	font-size: 18px;
 }
 
 .bottom h2 {
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .profile-pic {
