@@ -51,8 +51,6 @@ function scrollToCard(card, expandedIndex, clickedIndex) {
 
 	let target = left - (adjustment) - (screenwidth - elementWidth) / 2;
 
-	console.log('target:', target);
-
 	document.getElementById("carousel").scrollTo({
 		left: target,
 		behavior: "smooth"
