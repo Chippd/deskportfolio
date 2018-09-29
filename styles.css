@@ -207,6 +207,7 @@ a:hover {
 #carousel-mobile {
 	display: none;
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	height: 100vh;
 	margin-bottom: 150px;
 }
