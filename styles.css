@@ -45,12 +45,20 @@ a:hover {
 		z-index: 1;
 		overflow-x: scroll;
 		white-space: nowrap;
-		padding: 40px 50vw 0;
+		padding-top: 40px;
 		overflow: -moz-scrollbars-none;
 }
 
 #carousel::-webkit-scrollbar {
 		display: none;
+}
+
+.carousel-item-spacer {
+	width: 50vw;
+	visibility: hidden;
+	height:85%;
+	display: inline-block;
+	background-color: pink;
 }
 
 .carousel-item,
